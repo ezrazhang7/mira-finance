@@ -31,7 +31,7 @@ happen without updating this plan first.
 
 ### Foundation
 - [x] 1. `docs` — Add this improvement plan. *(type: docs)*
-- [ ] 2. `chore` — Scaffold Vite + React + TypeScript app: strict tsconfig,
+- [x] 2. `chore` — Scaffold Vite + React + TypeScript app: strict tsconfig,
   ESLint (flat config + typescript-eslint), Prettier, npm scripts.
   *(type: tooling)*
 - [ ] 3. `chore` — Test infrastructure: Vitest, Testing Library, jsdom,
