@@ -139,12 +139,18 @@ export function AppStoreProvider({
     dispatch(action);
   }, []);
 
+  // The database is opened exactly once per provider mount. A ref pins
+  // the opener: callers pass inline arrow functions, and letting a new
+  // prop identity re-run this effect would close the repository out from
+  // under in-flight writes (a bug caught in real-browser testing).
+  const openRepositoryRef = useRef(openRepository);
+
   useEffect(() => {
     let cancelled = false;
     let repo: Repository | null = null;
     (async () => {
       try {
-        repo = await openRepository();
+        repo = await openRepositoryRef.current();
         const [transactions, budgets, settings] = await Promise.all([
           repo.listTransactions(),
           repo.listBudgets(),
@@ -170,7 +176,7 @@ export function AppStoreProvider({
       repoRef.current = null;
       repo?.close();
     };
-  }, [openRepository, commit]);
+  }, [commit]);
 
   const addTransaction = useCallback(
     async (draft: DraftTransaction): Promise<WriteResult> => {
