@@ -62,7 +62,7 @@ happen without updating this plan first.
   navigation, responsive layout. *(type: UI)*
 - [x] 11. `ui` — Dashboard: balance summary, month-to-date spend, recent
   transactions. *(type: UI)*
-- [ ] 12. `ui` — Transactions: entry form with validation, list with
+- [x] 12. `ui` — Transactions: entry form with validation, list with
   filtering, edit/delete with undo. *(type: UI)*
 - [ ] 13. `ui` — Voice assistant: push-to-talk control, live transcript,
   spoken + visual confirmation, full manual fallback. *(type: UI/feature)*
