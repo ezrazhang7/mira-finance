@@ -72,8 +72,10 @@ happen without updating this plan first.
   accessible SVG charts with data-table fallbacks. *(type: UI)*
 
 ### Cross-cutting
-- [ ] 16. `backend` — i18n: typed translation layer, English + Spanish
+- [x] 16. `backend` — i18n: typed translation layer, English + Spanish
   locales, locale-aware currency/date formatting via `Intl`. *(type: i18n)*
+  *(Executed before the UI steps so components consume translations from
+  day one; scope unchanged.)*
 - [ ] 17. `security` — Hardening pass: Content-Security-Policy, input
   validation review, no-`dangerouslySetInnerHTML` audit, dependency audit,
   export/erase-my-data controls. *(type: security audit)*
