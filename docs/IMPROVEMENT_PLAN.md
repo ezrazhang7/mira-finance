@@ -41,7 +41,7 @@ happen without updating this plan first.
 - [x] 4. `backend` — Money and domain model: integer-cent `Money` utilities,
   `Transaction`, `Category`, `Budget` types, category taxonomy, validation.
   *(type: architecture)*
-- [ ] 5. `backend` — Persistence layer: typed IndexedDB wrapper with schema
+- [x] 5. `backend` — Persistence layer: typed IndexedDB wrapper with schema
   versioning and migration path; tested against fake-indexeddb.
   *(type: architecture)*
 - [ ] 6. `backend` — Application store: React context + reducer over the
