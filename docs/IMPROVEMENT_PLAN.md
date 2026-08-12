@@ -50,7 +50,7 @@ happen without updating this plan first.
   transcripts ("I spent 12 dollars on groceries", "how much did I spend this
   month", "set a 300 dollar budget for food") to typed intents, in English and
   Spanish. *(type: feature)*
-- [ ] 8. `backend` — Speech services: SpeechRecognition + SpeechSynthesis
+- [x] 8. `backend` — Speech services: SpeechRecognition + SpeechSynthesis
   wrappers with capability detection, error taxonomy, and graceful
   degradation to text input. *(type: API integration)*
 
