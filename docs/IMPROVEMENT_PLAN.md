@@ -55,7 +55,7 @@ happen without updating this plan first.
   degradation to text input. *(type: API integration)*
 
 ### Interface
-- [ ] 9. `ui` — Design system: CSS custom-property tokens (light/dark),
+- [x] 9. `ui` — Design system: CSS custom-property tokens (light/dark),
   accessible primitives (Button, Card, Field, Select, Dialog, Toast).
   *(type: UI)*
 - [ ] 10. `ui` — App shell: routing, landmark structure, skip link, bottom
