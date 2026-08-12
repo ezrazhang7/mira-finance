@@ -79,7 +79,7 @@ happen without updating this plan first.
 - [x] 17. `security` — Hardening pass: Content-Security-Policy, input
   validation review, no-`dangerouslySetInnerHTML` audit, dependency audit,
   export/erase-my-data controls. *(type: security audit)*
-- [ ] 18. `chore` — PWA: web manifest, icons, installability, offline shell.
+- [x] 18. `chore` — PWA: web manifest, icons, installability, offline shell.
   *(type: platform)*
 - [ ] 19. `docs` — README overhaul: what/why/how, architecture overview,
   screenshots section, development guide. *(type: docs)*

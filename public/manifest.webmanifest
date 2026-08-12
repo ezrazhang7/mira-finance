@@ -1,0 +1,25 @@
+{
+  "name": "Mira Finance",
+  "short_name": "Mira",
+  "description": "Voice-first personal finance. Private by design: your data never leaves your device.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f5f7f9",
+  "theme_color": "#0d7a68",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

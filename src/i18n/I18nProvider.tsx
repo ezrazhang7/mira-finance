@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo } from 'react';
+import { createContext, useContext, useEffect, useMemo } from 'react';
 import type { ReactNode } from 'react';
 import { formatCents } from '@/domain/money';
 import type { Cents } from '@/domain/money';
@@ -72,6 +72,11 @@ export function I18nProvider({
       },
     };
   }, [locale, currency]);
+
+  // Screen readers pick pronunciation rules from the document language.
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }

@@ -13,3 +13,12 @@ createRoot(rootElement).render(
     <App />
   </StrictMode>,
 );
+
+// Offline shell: production only — the dev server serves no sw.js build.
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch((error) => {
+      console.warn('Service worker registration failed', error);
+    });
+  });
+}
