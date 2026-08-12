@@ -6,11 +6,11 @@ import { DashboardPage } from '@/app/pages/DashboardPage';
 import { TransactionsPage } from '@/app/pages/TransactionsPage';
 import { BudgetsPage } from '@/app/pages/BudgetsPage';
 import { InsightsPage } from '@/app/pages/InsightsPage';
+import { SettingsPage } from '@/app/pages/SettingsPage';
 import { VoiceAssistant } from '@/app/voice/VoiceAssistant';
 
 function RoutedApp() {
   const [page, navigate] = useHashRoute();
-  const { t } = useI18n();
 
   return (
     <AppShell page={page} onNavigate={navigate}>
@@ -18,7 +18,7 @@ function RoutedApp() {
       {page === 'transactions' && <TransactionsPage />}
       {page === 'budgets' && <BudgetsPage />}
       {page === 'insights' && <InsightsPage />}
-      {page === 'settings' && <h1 className="page-title">{t('settings.title')}</h1>}
+      {page === 'settings' && <SettingsPage />}
       <VoiceAssistant onNavigate={navigate} />
     </AppShell>
   );

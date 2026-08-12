@@ -84,6 +84,14 @@ happen without updating this plan first.
 - [ ] 19. `docs` — README overhaul: what/why/how, architecture overview,
   screenshots section, development guide. *(type: docs)*
 
+### Additions flagged during execution
+
+- [x] 20. `ui` — Settings page: language, currency, and spoken-response
+  controls backed by persisted settings. *(type: UI; added because the
+  original checklist referenced settings everywhere — nav, i18n, voice —
+  but never gave the page its own item. The privacy controls from item 17
+  land on this page in the security commit.)*
+
 ## Explicitly out of scope (deliberate)
 
 - Bank account aggregation (Plaid etc.) — requires credentials and a backend;
