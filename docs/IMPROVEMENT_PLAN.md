@@ -66,7 +66,7 @@ happen without updating this plan first.
   filtering, edit/delete with undo. *(type: UI)*
 - [x] 13. `ui` — Voice assistant: push-to-talk control, live transcript,
   spoken + visual confirmation, full manual fallback. *(type: UI/feature)*
-- [ ] 14. `ui` — Budgets: create/edit monthly budgets per category, progress
+- [x] 14. `ui` — Budgets: create/edit monthly budgets per category, progress
   meters with over-budget states. *(type: UI)*
 - [ ] 15. `ui` — Insights: monthly spending trend and category breakdown as
   accessible SVG charts with data-table fallbacks. *(type: UI)*

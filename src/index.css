@@ -691,3 +691,89 @@ textarea {
   flex-direction: column;
   gap: var(--space-1);
 }
+
+/* ---------- Budgets ---------- */
+
+.budget-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.budget-list__item {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-2);
+}
+
+.budget-list__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.budget-list__button {
+  display: block;
+  width: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+}
+
+.budget-list__button:hover {
+  background: var(--color-surface-sunken);
+}
+
+.budget-meter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.budget-meter__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.budget-meter__name {
+  font-weight: 600;
+  flex: 1;
+}
+
+.budget-meter__delta {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.budget-meter__delta--over {
+  color: var(--color-danger);
+  font-weight: 600;
+}
+
+.budget-meter__track {
+  height: 0.5rem;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-sunken);
+  overflow: hidden;
+}
+
+.budget-meter__fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  transition: width 200ms ease;
+}
+
+.budget-meter__fill--over {
+  background: var(--color-danger);
+}
+
+.budget-meter__caption {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
