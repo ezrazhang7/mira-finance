@@ -76,7 +76,7 @@ happen without updating this plan first.
   locales, locale-aware currency/date formatting via `Intl`. *(type: i18n)*
   *(Executed before the UI steps so components consume translations from
   day one; scope unchanged.)*
-- [ ] 17. `security` — Hardening pass: Content-Security-Policy, input
+- [x] 17. `security` — Hardening pass: Content-Security-Policy, input
   validation review, no-`dangerouslySetInnerHTML` audit, dependency audit,
   export/erase-my-data controls. *(type: security audit)*
 - [ ] 18. `chore` — PWA: web manifest, icons, installability, offline shell.

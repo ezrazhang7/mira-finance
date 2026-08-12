@@ -62,3 +62,24 @@ describe('SettingsPage', () => {
     expect(await screen.findByRole('status')).toHaveTextContent('Settings saved');
   });
 });
+
+describe('SettingsPage privacy controls', () => {
+  it('erases all data only after explicit confirmation', async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    await user.click(await screen.findByRole('button', { name: 'Erase all data' }));
+    const dialog = await screen.findByRole('dialog', { name: 'Erase everything?' });
+    expect(dialog).toBeInTheDocument();
+
+    // Backing out keeps data intact.
+    await user.click(screen.getByRole('button', { name: 'Keep my data' }));
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Erase all data' }));
+    await screen.findByRole('dialog', { name: 'Erase everything?' });
+    await user.click(screen.getByRole('button', { name: 'Yes, erase everything' }));
+
+    expect(await screen.findByRole('status')).toHaveTextContent('All data erased');
+  });
+});
