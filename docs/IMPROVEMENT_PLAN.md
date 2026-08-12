@@ -34,7 +34,7 @@ happen without updating this plan first.
 - [x] 2. `chore` — Scaffold Vite + React + TypeScript app: strict tsconfig,
   ESLint (flat config + typescript-eslint), Prettier, npm scripts.
   *(type: tooling)*
-- [ ] 3. `chore` — Test infrastructure: Vitest, Testing Library, jsdom,
+- [x] 3. `chore` — Test infrastructure: Vitest, Testing Library, jsdom,
   fake-indexeddb, coverage config. *(type: tooling)*
 
 ### Core domain (pure TypeScript, fully unit-tested)
