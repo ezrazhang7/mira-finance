@@ -2,6 +2,7 @@ import { AppStoreProvider, useAppStore } from '@/store/AppStore';
 import { I18nProvider, useI18n } from '@/i18n/I18nProvider';
 import { AppShell } from '@/app/AppShell';
 import { useHashRoute } from '@/app/router';
+import { DashboardPage } from '@/app/pages/DashboardPage';
 
 function RoutedApp() {
   const [page, navigate] = useHashRoute();
@@ -9,7 +10,7 @@ function RoutedApp() {
 
   return (
     <AppShell page={page} onNavigate={navigate}>
-      {page === 'dashboard' && <h1 className="page-title">{t('dashboard.title')}</h1>}
+      {page === 'dashboard' && <DashboardPage onNavigate={navigate} />}
       {page === 'transactions' && <h1 className="page-title">{t('transactions.title')}</h1>}
       {page === 'budgets' && <h1 className="page-title">{t('budgets.title')}</h1>}
       {page === 'insights' && <h1 className="page-title">{t('insights.title')}</h1>}

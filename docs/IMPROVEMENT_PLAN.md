@@ -60,7 +60,7 @@ happen without updating this plan first.
   *(type: UI)*
 - [x] 10. `ui` — App shell: routing, landmark structure, skip link, bottom
   navigation, responsive layout. *(type: UI)*
-- [ ] 11. `ui` — Dashboard: balance summary, month-to-date spend, recent
+- [x] 11. `ui` — Dashboard: balance summary, month-to-date spend, recent
   transactions. *(type: UI)*
 - [ ] 12. `ui` — Transactions: entry form with validation, list with
   filtering, edit/delete with undo. *(type: UI)*
