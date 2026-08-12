@@ -58,7 +58,7 @@ happen without updating this plan first.
 - [x] 9. `ui` — Design system: CSS custom-property tokens (light/dark),
   accessible primitives (Button, Card, Field, Select, Dialog, Toast).
   *(type: UI)*
-- [ ] 10. `ui` — App shell: routing, landmark structure, skip link, bottom
+- [x] 10. `ui` — App shell: routing, landmark structure, skip link, bottom
   navigation, responsive layout. *(type: UI)*
 - [ ] 11. `ui` — Dashboard: balance summary, month-to-date spend, recent
   transactions. *(type: UI)*
