@@ -46,7 +46,7 @@ happen without updating this plan first.
   *(type: architecture)*
 - [x] 6. `backend` — Application store: React context + reducer over the
   persistence layer; optimistic updates; undoable deletes. *(type: architecture)*
-- [ ] 7. `backend` — Voice intent parser: deterministic grammar mapping
+- [x] 7. `backend` — Voice intent parser: deterministic grammar mapping
   transcripts ("I spent 12 dollars on groceries", "how much did I spend this
   month", "set a 300 dollar budget for food") to typed intents, in English and
   Spanish. *(type: feature)*
