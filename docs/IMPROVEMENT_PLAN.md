@@ -68,7 +68,7 @@ happen without updating this plan first.
   spoken + visual confirmation, full manual fallback. *(type: UI/feature)*
 - [x] 14. `ui` — Budgets: create/edit monthly budgets per category, progress
   meters with over-budget states. *(type: UI)*
-- [ ] 15. `ui` — Insights: monthly spending trend and category breakdown as
+- [x] 15. `ui` — Insights: monthly spending trend and category breakdown as
   accessible SVG charts with data-table fallbacks. *(type: UI)*
 
 ### Cross-cutting

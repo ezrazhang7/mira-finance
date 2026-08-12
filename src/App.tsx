@@ -5,6 +5,7 @@ import { useHashRoute } from '@/app/router';
 import { DashboardPage } from '@/app/pages/DashboardPage';
 import { TransactionsPage } from '@/app/pages/TransactionsPage';
 import { BudgetsPage } from '@/app/pages/BudgetsPage';
+import { InsightsPage } from '@/app/pages/InsightsPage';
 import { VoiceAssistant } from '@/app/voice/VoiceAssistant';
 
 function RoutedApp() {
@@ -16,7 +17,7 @@ function RoutedApp() {
       {page === 'dashboard' && <DashboardPage onNavigate={navigate} />}
       {page === 'transactions' && <TransactionsPage />}
       {page === 'budgets' && <BudgetsPage />}
-      {page === 'insights' && <h1 className="page-title">{t('insights.title')}</h1>}
+      {page === 'insights' && <InsightsPage />}
       {page === 'settings' && <h1 className="page-title">{t('settings.title')}</h1>}
       <VoiceAssistant onNavigate={navigate} />
     </AppShell>
