@@ -38,7 +38,7 @@ happen without updating this plan first.
   fake-indexeddb, coverage config. *(type: tooling)*
 
 ### Core domain (pure TypeScript, fully unit-tested)
-- [ ] 4. `backend` — Money and domain model: integer-cent `Money` utilities,
+- [x] 4. `backend` — Money and domain model: integer-cent `Money` utilities,
   `Transaction`, `Category`, `Budget` types, category taxonomy, validation.
   *(type: architecture)*
 - [ ] 5. `backend` — Persistence layer: typed IndexedDB wrapper with schema
