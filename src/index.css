@@ -889,7 +889,9 @@ textarea {
 
 .bar-list__row {
   display: grid;
-  grid-template-columns: minmax(6rem, 1fr) 2fr auto;
+  /* Labels take their natural width (category names are bounded);
+     the bar flexes into the remaining space. */
+  grid-template-columns: minmax(7rem, max-content) minmax(3rem, 1fr) auto;
   align-items: center;
   gap: var(--space-3);
 }

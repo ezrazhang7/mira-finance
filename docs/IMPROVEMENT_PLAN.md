@@ -81,10 +81,15 @@ happen without updating this plan first.
   export/erase-my-data controls. *(type: security audit)*
 - [x] 18. `chore` — PWA: web manifest, icons, installability, offline shell.
   *(type: platform)*
-- [ ] 19. `docs` — README overhaul: what/why/how, architecture overview,
+- [x] 19. `docs` — README overhaul: what/why/how, architecture overview,
   screenshots section, development guide. *(type: docs)*
 
 ### Additions flagged during execution
+
+- [x] 21. `fix` — Open the local database exactly once per store mount.
+  *(type: bug fix; found by driving the production build in a real
+  browser: re-render-driven effect re-runs closed the database under
+  in-flight writes.)*
 
 - [x] 20. `ui` — Settings page: language, currency, and spoken-response
   controls backed by persisted settings. *(type: UI; added because the
