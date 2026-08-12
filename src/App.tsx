@@ -4,6 +4,7 @@ import { AppShell } from '@/app/AppShell';
 import { useHashRoute } from '@/app/router';
 import { DashboardPage } from '@/app/pages/DashboardPage';
 import { TransactionsPage } from '@/app/pages/TransactionsPage';
+import { VoiceAssistant } from '@/app/voice/VoiceAssistant';
 
 function RoutedApp() {
   const [page, navigate] = useHashRoute();
@@ -16,6 +17,7 @@ function RoutedApp() {
       {page === 'budgets' && <h1 className="page-title">{t('budgets.title')}</h1>}
       {page === 'insights' && <h1 className="page-title">{t('insights.title')}</h1>}
       {page === 'settings' && <h1 className="page-title">{t('settings.title')}</h1>}
+      <VoiceAssistant onNavigate={navigate} />
     </AppShell>
   );
 }

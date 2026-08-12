@@ -64,7 +64,7 @@ happen without updating this plan first.
   transactions. *(type: UI)*
 - [x] 12. `ui` — Transactions: entry form with validation, list with
   filtering, edit/delete with undo. *(type: UI)*
-- [ ] 13. `ui` — Voice assistant: push-to-talk control, live transcript,
+- [x] 13. `ui` — Voice assistant: push-to-talk control, live transcript,
   spoken + visual confirmation, full manual fallback. *(type: UI/feature)*
 - [ ] 14. `ui` — Budgets: create/edit monthly budgets per category, progress
   meters with over-budget states. *(type: UI)*

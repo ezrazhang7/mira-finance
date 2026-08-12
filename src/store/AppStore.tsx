@@ -15,10 +15,9 @@ import { validateDraftBudget, validateDraftTransaction } from '@/domain/validati
 import type { DraftBudget, DraftTransaction, ValidationErrorCode } from '@/domain/validation';
 import { Repository } from '@/storage/repository';
 
-export type WriteResult =
-  | { ok: true }
-  | { ok: false; errors: ValidationErrorCode[] }
-  | { ok: false; errors: ['persistence-failed'] };
+export type WriteErrorCode = ValidationErrorCode | 'persistence-failed';
+
+export type WriteResult = { ok: true } | { ok: false; errors: WriteErrorCode[] };
 
 interface AppState {
   status: 'loading' | 'ready' | 'error';
