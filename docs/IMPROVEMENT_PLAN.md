@@ -44,7 +44,7 @@ happen without updating this plan first.
 - [x] 5. `backend` — Persistence layer: typed IndexedDB wrapper with schema
   versioning and migration path; tested against fake-indexeddb.
   *(type: architecture)*
-- [ ] 6. `backend` — Application store: React context + reducer over the
+- [x] 6. `backend` — Application store: React context + reducer over the
   persistence layer; optimistic updates; undoable deletes. *(type: architecture)*
 - [ ] 7. `backend` — Voice intent parser: deterministic grammar mapping
   transcripts ("I spent 12 dollars on groceries", "how much did I spend this
