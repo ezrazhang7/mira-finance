@@ -11,7 +11,7 @@ const RECENT_COUNT = 5;
 
 export function DashboardPage({ onNavigate }: { onNavigate: (page: Page) => void }) {
   const { transactions } = useAppStore();
-  const { t, money, month } = useI18n();
+  const { t, money, monthName } = useI18n();
 
   const monthKey = currentMonthKey();
   const balance = totalBalance(transactions);
@@ -31,13 +31,13 @@ export function DashboardPage({ onNavigate }: { onNavigate: (page: Page) => void
       <div className="stat-grid">
         <Card>
           <h2 className="card__title">
-            {t('dashboard.spentThisMonth', { month: month(monthKey) })}
+            {t('dashboard.spentThisMonth', { month: monthName(monthKey) })}
           </h2>
           <p className="stat-amount">{money(totals.spent)}</p>
         </Card>
         <Card>
           <h2 className="card__title">
-            {t('dashboard.incomeThisMonth', { month: month(monthKey) })}
+            {t('dashboard.incomeThisMonth', { month: monthName(monthKey) })}
           </h2>
           <p className="stat-amount stat-amount--income">{money(totals.earned)}</p>
         </Card>

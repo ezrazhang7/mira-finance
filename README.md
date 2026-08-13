@@ -5,9 +5,15 @@
 Say *"I spent 12.50 on groceries"* — Mira records it, tells you what it heard,
 and keeps everything on your device. No account, no server, no upload, ever.
 
-| Home | Talk to Mira | Budgets | Insights |
+| Home | Talk to Mira | Add entry | Insights |
 | --- | --- | --- | --- |
-| ![Dashboard](docs/screenshots/dashboard.png) | ![Voice assistant](docs/screenshots/voice.png) | ![Budgets](docs/screenshots/budgets.png) | ![Insights](docs/screenshots/insights.png) |
+| ![Dashboard](docs/screenshots/dashboard.png) | ![Voice assistant](docs/screenshots/voice.png) | ![Add entry sheet](docs/screenshots/form.png) | ![Insights](docs/screenshots/insights.png) |
+| ![Dashboard, dark](docs/screenshots/dashboard-dark.png) | ![Voice assistant, dark](docs/screenshots/voice-dark.png) | ![Budgets](docs/screenshots/budgets.png) | ![Insights, dark](docs/screenshots/insights-dark.png) |
+
+The interface follows Material Design 3 component specs (navigation bar
+with active-indicator pill, bottom sheets, tonal buttons, M3 type ramp)
+with iOS-style large titles — in the same Mira teal palette, light and
+dark.
 
 ## Why it's built this way
 

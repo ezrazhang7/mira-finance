@@ -97,6 +97,24 @@ happen without updating this plan first.
   but never gave the page its own item. The privacy controls from item 17
   land on this page in the security commit.)*
 
+### Phase 2 — professional UI overhaul (requested 2026-08-13)
+
+Research-grounded against Material Design 3 specs (navigation bar,
+type scale, shape/elevation, state layers), Apple HIG (large titles,
+sheet presentation), and fintech dashboard conventions. Color palette
+unchanged per instruction.
+
+- [x] 22. `ui` — Design-token overhaul: M3 surface-container system,
+  M3 type scale, shape scale, elevation levels, state layers, motion
+  tokens. *(type: UI revamp)*
+- [x] 23. `ui` — Component overhaul: M3 navigation bar with active
+  indicator pill, bottom-sheet dialogs with grabber (centered ≥640px),
+  filled/tonal/text buttons, outlined text fields, M3 list items,
+  segmented buttons, snackbar. *(type: UI revamp)*
+- [x] 24. `ui` — Page-level polish: dashboard hierarchy (balance
+  dominant), voice assistant redesign with example chips, empty states,
+  refreshed screenshots. *(type: UI revamp)*
+
 ## Explicitly out of scope (deliberate)
 
 - Bank account aggregation (Plaid etc.) — requires credentials and a backend;

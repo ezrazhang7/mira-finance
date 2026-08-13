@@ -20,6 +20,8 @@ export interface I18n {
   date: (isoDate: string) => string;
   /** Formats a `yyyy-mm` month key, e.g. "August 2026". */
   month: (monthKey: string) => string;
+  /** Month name alone, e.g. "August" — for tight labels. */
+  monthName: (monthKey: string) => string;
 }
 
 const I18nContext = createContext<I18n | null>(null);
@@ -53,6 +55,7 @@ export function I18nProvider({
     const intlLocale = INTL_LOCALE[locale];
     const dateFormat = new Intl.DateTimeFormat(intlLocale, { month: 'short', day: 'numeric' });
     const monthFormat = new Intl.DateTimeFormat(intlLocale, { month: 'long', year: 'numeric' });
+    const monthNameFormat = new Intl.DateTimeFormat(intlLocale, { month: 'long' });
 
     const t = (key: TranslationKey, params?: TranslateParams) => interpolate(catalog[key], params);
 
@@ -69,6 +72,10 @@ export function I18nProvider({
       month: (monthKey) => {
         const [y, m] = monthKey.split('-').map(Number) as [number, number];
         return monthFormat.format(new Date(y, m - 1, 1));
+      },
+      monthName: (monthKey) => {
+        const [y, m] = monthKey.split('-').map(Number) as [number, number];
+        return monthNameFormat.format(new Date(y, m - 1, 1));
       },
     };
   }, [locale, currency]);
