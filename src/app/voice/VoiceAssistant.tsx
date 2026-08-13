@@ -14,6 +14,15 @@ import { executeIntent } from './executeIntent';
 
 type Phase = 'idle' | 'listening' | 'processing';
 
+/** Example commands rendered as tappable chips — tapping one runs it. */
+const EXAMPLE_KEYS = [
+  'voice.exampleSpend',
+  'voice.exampleIncome',
+  'voice.exampleQuery',
+  'voice.exampleBudget',
+  'voice.exampleNavigate',
+] as const;
+
 export function VoiceAssistant({ onNavigate }: { onNavigate: (page: Page) => void }) {
   const store = useAppStore();
   const i18n = useI18n();
@@ -160,15 +169,24 @@ export function VoiceAssistant({ onNavigate }: { onNavigate: (page: Page) => voi
       <Dialog open={open} title={t('voice.open')} onClose={close}>
         <div className="voice-panel">
           {recognitionSupported ? (
-            <Button
-              variant={phase === 'listening' ? 'danger' : 'primary'}
-              fullWidth
-              onClick={phase === 'listening' ? stopListening : startListening}
-              disabled={phase === 'processing'}
-            >
-              <MicIcon />
-              {phase === 'listening' ? t('voice.listening') : t('voice.tapToTalk')}
-            </Button>
+            <div className="voice-panel__mic">
+              <button
+                type="button"
+                className={
+                  phase === 'listening'
+                    ? 'voice-panel__mic-button voice-panel__mic-button--listening'
+                    : 'voice-panel__mic-button'
+                }
+                onClick={phase === 'listening' ? stopListening : startListening}
+                disabled={phase === 'processing'}
+                aria-label={phase === 'listening' ? t('voice.listening') : t('voice.tapToTalk')}
+              >
+                <MicIcon />
+              </button>
+              <p className="voice-panel__mic-label" aria-hidden="true">
+                {phase === 'listening' ? t('voice.listening') : t('voice.tapToTalk')}
+              </p>
+            </div>
           ) : (
             <p className="voice-panel__notice">{t('voice.notSupported')}</p>
           )}
@@ -198,13 +216,26 @@ export function VoiceAssistant({ onNavigate }: { onNavigate: (page: Page) => voi
           </form>
 
           <div className="voice-panel__examples">
-            <h3 className="card__title">{t('voice.examplesTitle')}</h3>
-            <ul>
-              <li>{t('voice.exampleSpend')}</li>
-              <li>{t('voice.exampleIncome')}</li>
-              <li>{t('voice.exampleQuery')}</li>
-              <li>{t('voice.exampleBudget')}</li>
-              <li>{t('voice.exampleNavigate')}</li>
+            <h3>{t('voice.examplesTitle')}</h3>
+            <ul className="voice-chips">
+              {EXAMPLE_KEYS.map((key) => {
+                const phrase = t(key).replace(/^[“«]|[”»]$/g, '');
+                return (
+                  <li key={key}>
+                    <button
+                      type="button"
+                      className="voice-chip"
+                      disabled={phase === 'processing'}
+                      onClick={() => {
+                        setTranscript(phrase);
+                        void process(phrase);
+                      }}
+                    >
+                      {t(key)}
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
