@@ -39,7 +39,9 @@ export function AppShell({
             aria-current={page === itemPage ? 'page' : undefined}
             onClick={() => onNavigate(itemPage)}
           >
-            <Icon className="bottom-nav__icon" />
+            <span className="bottom-nav__indicator">
+              <Icon className="bottom-nav__icon" />
+            </span>
             <span className="bottom-nav__label">{t(labelKey)}</span>
           </button>
         ))}

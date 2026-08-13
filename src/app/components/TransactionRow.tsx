@@ -16,9 +16,12 @@ export function TransactionRow({
   const amountClass =
     transaction.kind === 'income' ? 'tx-row__amount tx-row__amount--income' : 'tx-row__amount';
 
+  const iconClass =
+    transaction.kind === 'income' ? 'tx-row__icon tx-row__icon--income' : 'tx-row__icon';
+
   const body = (
     <>
-      <span className="tx-row__icon" aria-hidden="true">
+      <span className={iconClass} aria-hidden="true">
         {category.icon}
       </span>
       <span className="tx-row__details">

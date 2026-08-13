@@ -175,7 +175,7 @@ export function BudgetsPage() {
         </Button>
       </div>
 
-      <p className="empty-state">{t('budgets.intro')}</p>
+      <p className="page-intro">{t('budgets.intro')}</p>
 
       <Card>
         {budgets.length === 0 ? (
